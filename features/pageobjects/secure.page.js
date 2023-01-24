@@ -17,6 +17,16 @@ class SecurePage extends Page {
         return $("//a[normalize-space()='Log out']");
     }
 
+    get searchBox() {
+        return $("//input[@id='woocommerce-product-search-field-0']");
+    }
+
+    async search (keyword) {
+        await this.searchBox.click();
+        await this.searchBox.setValue(keyword);
+        await browser.keys("\uE007"); 
+    }
+
 }
 
 module.exports = new SecurePage();

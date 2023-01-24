@@ -21,6 +21,12 @@ class ShopPage extends Page {
         return $("(//img[@class='attachment-woocommerce_thumbnail size-woocommerce_thumbnail'])[1]");
     }
 
+    async product(text)
+    {
+        return $(`//h2[normalize-space()="${text}"]`);
+
+    }
+
     async select (text) {
         await this.selectOrder.click();
         await this.selectOrder.selectByVisibleText(text);
