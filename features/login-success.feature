@@ -7,6 +7,6 @@ Feature: User login for Migueltestingsite.com
     Then I should see the logout link
 
     Examples:
-      | username  | password             |
+      | username  | password   |
 
-      | kailax360 | Kailax.Corp360       |
+      | invalid   | invalid    |
